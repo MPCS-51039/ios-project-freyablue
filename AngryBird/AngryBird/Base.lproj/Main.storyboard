@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Bird List View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="BirdListViewController" customModule="AngryBird" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jXV-Tk-xH5">
+                                <rect key="frame" x="0.0" y="59" width="393" height="793"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="birdCell" rowHeight="90" id="4Ko-3r-qCR" customClass="BirdCell" customModule="AngryBird" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="90"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4Ko-3r-qCR" id="nku-uc-lfe">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="90"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="NH7-ho-WHS">
+                                                    <rect key="frame" x="119" y="23" width="56.666666666666686" height="58.333333333333343"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sjt-Pv-p5c" userLabel="birdName">
+                                                            <rect key="frame" x="0.0" y="0.0" width="56.666666666666664" height="28.666666666666668"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vnl-L4-UAH" userLabel="birdDescription">
+                                                            <rect key="frame" x="0.0" y="36.666666666666664" width="43.666666666666664" height="21.666666666666664"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="person.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Ef1-86-fzY">
+                                                    <rect key="frame" x="20" y="12" width="90" height="75"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="75" id="Xdm-bH-5RV"/>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="75" id="Yfy-fB-2AZ"/>
+                                                        <constraint firstAttribute="width" constant="75" id="ihw-fA-Jct"/>
+                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="75" id="kpm-VT-e7h"/>
+                                                        <constraint firstAttribute="width" relation="lessThanOrEqual" constant="75" id="pja-hS-JHq"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Ef1-86-fzY" firstAttribute="leading" secondItem="nku-uc-lfe" secondAttribute="leading" constant="21" id="06e-sb-PuD"/>
+                                                <constraint firstItem="NH7-ho-WHS" firstAttribute="centerY" secondItem="nku-uc-lfe" secondAttribute="centerY" id="LeK-aS-bb9"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="NH7-ho-WHS" secondAttribute="trailing" constant="20" id="Pvg-MH-Y2E"/>
+                                                <constraint firstItem="Ef1-86-fzY" firstAttribute="centerX" secondItem="nku-uc-lfe" secondAttribute="centerX" id="iqN-Uj-etc"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="birdDescriptionLabel" destination="vnl-L4-UAH" id="3J4-DK-Idj"/>
+                                            <outlet property="birdNameLabel" destination="Sjt-Pv-p5c" id="ult-Hi-fYJ"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="jXV-Tk-xH5" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="M6y-c4-RFb"/>
+                            <constraint firstAttribute="bottom" secondItem="jXV-Tk-xH5" secondAttribute="bottom" id="P1b-o2-o9h"/>
+                            <constraint firstItem="jXV-Tk-xH5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="WNf-gg-q5Z"/>
+                            <constraint firstItem="jXV-Tk-xH5" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="X3z-Gx-bWb"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="jXV-Tk-xH5" id="vUH-vV-h4S"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="StW-zD-xO0">
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="793"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <prototypes>
+                        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="birdCell" id="rz5-KL-PcM">
+                            <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rz5-KL-PcM" id="xHB-UF-TwE">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </tableViewCellContentView>
+                        </tableViewCell>
+                    </prototypes>
+                </tableView>
+            </objects>
+            <point key="canvasLocation" x="46.564885496183201" y="-2.1126760563380285"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="person.circle.fill" catalog="system" width="128" height="123"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
