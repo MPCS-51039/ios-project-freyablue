@@ -18,6 +18,8 @@
 		D172876029D6DEF3006DA326 /* AngryBirdUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D172875F29D6DEF3006DA326 /* AngryBirdUITests.swift */; };
 		D172876229D6DEF3006DA326 /* AngryBirdUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D172876129D6DEF3006DA326 /* AngryBirdUITestsLaunchTests.swift */; };
 		D172876F29D8D08B006DA326 /* BirdCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D172876E29D8D08B006DA326 /* BirdCell.swift */; };
+		D172877129DEA33F006DA326 /* Bird.swift in Sources */ = {isa = PBXBuildFile; fileRef = D172877029DEA33F006DA326 /* Bird.swift */; };
+		D172877329DEA991006DA326 /* BirdService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D172877229DEA991006DA326 /* BirdService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,8 @@
 		D172875F29D6DEF3006DA326 /* AngryBirdUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AngryBirdUITests.swift; sourceTree = "<group>"; };
 		D172876129D6DEF3006DA326 /* AngryBirdUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AngryBirdUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		D172876E29D8D08B006DA326 /* BirdCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirdCell.swift; sourceTree = "<group>"; };
+		D172877029DEA33F006DA326 /* Bird.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bird.swift; sourceTree = "<group>"; };
+		D172877229DEA991006DA326 /* BirdService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirdService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,11 +107,12 @@
 		D172873A29D6DEF2006DA326 /* AngryBird */ = {
 			isa = PBXGroup;
 			children = (
+				D172877729DEC61D006DA326 /* Data */,
+				D172877629DEC5E1006DA326 /* Controllers */,
+				D172877529DEC5C7006DA326 /* Views */,
 				D172873B29D6DEF2006DA326 /* AppDelegate.swift */,
 				D172873D29D6DEF2006DA326 /* SceneDelegate.swift */,
-				D172873F29D6DEF2006DA326 /* BirdListViewController.swift */,
 				D172874129D6DEF2006DA326 /* Main.storyboard */,
-				D172876E29D8D08B006DA326 /* BirdCell.swift */,
 				D172874729D6DEF3006DA326 /* Assets.xcassets */,
 				D172874929D6DEF3006DA326 /* LaunchScreen.storyboard */,
 				D172874C29D6DEF3006DA326 /* Info.plist */,
@@ -131,6 +136,31 @@
 				D172876129D6DEF3006DA326 /* AngryBirdUITestsLaunchTests.swift */,
 			);
 			path = AngryBirdUITests;
+			sourceTree = "<group>";
+		};
+		D172877529DEC5C7006DA326 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D172876E29D8D08B006DA326 /* BirdCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D172877629DEC5E1006DA326 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D172873F29D6DEF2006DA326 /* BirdListViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		D172877729DEC61D006DA326 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				D172877029DEA33F006DA326 /* Bird.swift */,
+				D172877229DEA991006DA326 /* BirdService.swift */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -268,6 +298,8 @@
 				D172874029D6DEF2006DA326 /* BirdListViewController.swift in Sources */,
 				D172876F29D8D08B006DA326 /* BirdCell.swift in Sources */,
 				D172873C29D6DEF2006DA326 /* AppDelegate.swift in Sources */,
+				D172877329DEA991006DA326 /* BirdService.swift in Sources */,
+				D172877129DEA33F006DA326 /* Bird.swift in Sources */,
 				D172873E29D6DEF2006DA326 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
