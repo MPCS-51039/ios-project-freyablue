@@ -10,6 +10,7 @@ import Foundation
 class Bird {
     var name : String
     var description : String
+    var confirmedSighting: Bool = false
     
     init(named name:String, description:String){
         self.name = name

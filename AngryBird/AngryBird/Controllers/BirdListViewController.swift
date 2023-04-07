@@ -43,8 +43,9 @@ extension BirdListViewController: UITableViewDataSource {
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = self.tableView.dequeueReusableCell(withIdentifier: "birdCell") as! BirdCell
         let curr = self.flock[indexPath.row]
-        cell.birdNameLabel.text = curr.name
-        cell.birdDescriptionLabel.text = curr.description
+        
+        cell.bird = curr
+        
         return cell
     }
     
@@ -53,5 +54,13 @@ extension BirdListViewController: UITableViewDataSource {
 extension BirdListViewController: UITableViewDelegate {
     //MARK: Delegate
     
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if
+            let cell = self.tableView.cellForRow(at: indexPath) as? BirdCell,
+            let confirmedBird = cell.bird
+        {
+            confirmedBird.confirmedSighting = true
+            cell.accessoryType = confirmedBird.confirmedSighting ? .checkmark : .none
+        }
+    }
 }

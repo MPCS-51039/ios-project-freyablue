@@ -8,10 +8,20 @@
 import UIKit
 
 class BirdCell: UITableViewCell {
+    
+    
 
     @IBOutlet weak var birdNameLabel: UILabel!
     
     @IBOutlet weak var birdDescriptionLabel: UILabel!
+    
+    var bird: Bird?{
+        didSet {
+            self.birdNameLabel.text = bird?.name
+            self.birdDescriptionLabel.text = bird?.description
+            self.accessoryType = bird!.confirmedSighting ?.checkmark : .none
+        }
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
