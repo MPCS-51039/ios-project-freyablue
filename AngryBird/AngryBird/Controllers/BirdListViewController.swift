@@ -28,6 +28,8 @@ class BirdListViewController: UIViewController{
         self.tableView.dataSource = self
         self.tableView.delegate = self
         
+        self.navigationController?.navigationBar.prefersLargeTitles = true
+        
     }
     
 }
@@ -63,4 +65,34 @@ extension BirdListViewController: UITableViewDelegate {
             cell.accessoryType = confirmedBird.confirmedSighting ? .checkmark : .none
         }
     }
+    
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        
+        let cell = self.tableView.cellForRow(at: indexPath) as! BirdCell
+        let img = UIImageView(frame:CGRect(x: 0, y: 65, width: 25, height: 30))
+        img.image = UIImage(systemName: "star.fill")
+        img.tintColor = .systemYellow
+        
+        
+        let confirmedAction = UIContextualAction(style: .normal, title:"Confirmed"){
+            (action, view, completionHandler) in cell.accessoryView = img
+            completionHandler(true)
+        }
+        let cancelAction = UIContextualAction(style: .normal, title:"Cancel"){
+            (action, view, completionHandler) in cell.accessoryView = .none
+            completionHandler(true)
+        }
+        
+        confirmedAction.backgroundColor = UIColor.brown
+        confirmedAction.image = UIImage(named: "heart")
+        
+        
+        
+        cancelAction.backgroundColor = UIColor.gray
+        let act = UISwipeActionsConfiguration(actions: [cancelAction,confirmedAction])
+        act.performsFirstActionWithFullSwipe = false
+        return act
+    }
+    
+    
 }
