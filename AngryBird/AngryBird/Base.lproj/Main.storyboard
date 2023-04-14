@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hdV-F8-CWO">
-    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,30 +13,30 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="BirdListViewController" customModule="AngryBird" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jXV-Tk-xH5">
-                                <rect key="frame" x="0.0" y="103" width="393" height="749"/>
+                                <rect key="frame" x="0.0" y="143" width="390" height="701"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="birdCell" rowHeight="90" id="4Ko-3r-qCR" customClass="BirdCell" customModule="AngryBird" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="50" width="393" height="90"/>
+                                        <rect key="frame" x="0.0" y="50" width="390" height="90"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4Ko-3r-qCR" id="nku-uc-lfe">
-                                            <rect key="frame" x="0.0" y="0.0" width="393" height="90"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="390" height="90"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="NH7-ho-WHS">
-                                                    <rect key="frame" x="119" y="23" width="48" height="52.333333333333343"/>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="NH7-ho-WHS">
+                                                    <rect key="frame" x="119" y="19.000000000000004" width="48" height="52.333333333333343"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sjt-Pv-p5c" userLabel="birdName">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sjt-Pv-p5c" userLabel="birdName">
                                                             <rect key="frame" x="0.0" y="0.0" width="48" height="24"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vnl-L4-UAH" userLabel="birdDescription">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vnl-L4-UAH" userLabel="birdDescription">
                                                             <rect key="frame" x="0.0" y="32" width="41.333333333333336" height="20.333333333333329"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
@@ -70,6 +70,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="birdDescriptionLabel" destination="vnl-L4-UAH" id="3J4-DK-Idj"/>
+                                            <outlet property="birdImageView" destination="Ef1-86-fzY" id="yJM-8Q-llw"/>
                                             <outlet property="birdNameLabel" destination="Sjt-Pv-p5c" id="ult-Hi-fYJ"/>
                                             <segue destination="Dhd-S4-vlZ" kind="show" id="2eI-r2-q5C"/>
                                         </connections>
@@ -110,21 +111,95 @@
             </objects>
             <point key="canvasLocation" x="973.28244274809151" y="-2.1126760563380285"/>
         </scene>
-        <!--View Controller-->
+        <!--Detail View Controller-->
         <scene sceneID="5gm-oP-X3M">
             <objects>
-                <viewController id="Dhd-S4-vlZ" sceneMemberID="viewController">
+                <viewController id="Dhd-S4-vlZ" customClass="DetailViewController" customModule="AngryBird" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="t8Z-VR-KcF">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cNu-W8-2G7">
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="a4G-j7-enf">
+                                        <rect key="frame" x="0.0" y="0.0" width="390" height="454"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Killerwhales" translatesAutoresizingMaskIntoConstraints="NO" id="k09-tQ-Arr">
+                                                <rect key="frame" x="0.0" y="0.0" width="390" height="292.66666666666669"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="k09-tQ-Arr" secondAttribute="height" multiplier="4:3" id="kg1-dN-nC9"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6CZ-XX-Ha6" userLabel="whaleLabel">
+                                                <rect key="frame" x="0.0" y="313.66666666666669" width="78" height="38.333333333333314"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="32"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="DI9-r6-Hmn">
+                                                <rect key="frame" x="0.0" y="373" width="204.33333333333334" height="30"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vs4-7F-FI1">
+                                                        <rect key="frame" x="0.0" y="0.0" width="133.66666666666666" height="30"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="25"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sNM-gg-1sg">
+                                                        <rect key="frame" x="146.66666666666666" y="0.0" width="57.666666666666657" height="30"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="25"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="7ng-Iu-bCM">
+                                                <rect key="frame" x="0.0" y="424" width="158" height="30"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Habitat:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gPN-TM-6xk">
+                                                        <rect key="frame" x="0.0" y="0.0" width="87.333333333333329" height="30"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="25"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZMu-w1-0ap">
+                                                        <rect key="frame" x="100.33333333333333" y="0.0" width="57.666666666666671" height="30"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="25"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="a4G-j7-enf" firstAttribute="trailing" secondItem="405-ZW-IeP" secondAttribute="trailing" id="Ea3-uf-lpN"/>
+                                    <constraint firstItem="a4G-j7-enf" firstAttribute="leading" secondItem="405-ZW-IeP" secondAttribute="leading" id="bhJ-3r-3o5"/>
+                                    <constraint firstItem="a4G-j7-enf" firstAttribute="top" secondItem="405-ZW-IeP" secondAttribute="top" id="umU-iI-YWO"/>
+                                    <constraint firstItem="a4G-j7-enf" firstAttribute="width" secondItem="UWi-VG-EnN" secondAttribute="width" id="vBI-El-qI1"/>
+                                    <constraint firstItem="a4G-j7-enf" firstAttribute="bottom" secondItem="405-ZW-IeP" secondAttribute="bottom" id="xk8-8V-phu"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="405-ZW-IeP"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="UWi-VG-EnN"/>
+                            </scrollView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="eyj-tq-jZh"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="cNu-W8-2G7" firstAttribute="trailing" secondItem="t8Z-VR-KcF" secondAttribute="trailing" id="PJS-Nr-tll"/>
+                            <constraint firstItem="k09-tQ-Arr" firstAttribute="width" secondItem="t8Z-VR-KcF" secondAttribute="width" id="Qe1-Gy-EBP"/>
+                            <constraint firstItem="cNu-W8-2G7" firstAttribute="leading" secondItem="t8Z-VR-KcF" secondAttribute="leading" id="XoP-tC-WIb"/>
+                            <constraint firstAttribute="top" secondItem="cNu-W8-2G7" secondAttribute="top" id="f4n-HB-JwA"/>
+                            <constraint firstItem="cNu-W8-2G7" firstAttribute="bottom" secondItem="t8Z-VR-KcF" secondAttribute="bottom" id="no7-1M-aMB"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="p6o-LE-aqY"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cf2-Kc-qCk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1673" y="-2"/>
+            <point key="canvasLocation" x="1671.2" y="-2.2167487684729066"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="vOA-bD-QZr">
@@ -132,7 +207,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hdV-F8-CWO" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="qeY-og-ZgL">
-                        <rect key="frame" x="0.0" y="59" width="393" height="96"/>
+                        <rect key="frame" x="0.0" y="47" width="390" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" systemColor="systemYellowColor"/>
                     </navigationBar>
@@ -147,6 +222,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Killerwhales" width="2186" height="1453"/>
         <image name="person.circle.fill" catalog="system" width="128" height="123"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

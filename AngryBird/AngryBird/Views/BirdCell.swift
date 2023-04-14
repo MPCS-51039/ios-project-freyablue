@@ -15,11 +15,22 @@ class BirdCell: UITableViewCell {
     
     @IBOutlet weak var birdDescriptionLabel: UILabel!
     
+   
+    @IBOutlet weak var birdImageView: UIImageView!
+    
     var bird: Bird?{
         didSet {
             self.birdNameLabel.text = bird?.name
             self.birdDescriptionLabel.text = bird?.description
             self.accessoryType = bird!.confirmedSighting ?.checkmark : .none
+            
+            DispatchQueue.global(qos:.userInitiated).async {
+                let imageData = NSData(contentsOf: URL(string: self.bird!.imageURL)!)
+                DispatchQueue.main.async {
+                    self.birdImageView.image = UIImage(data:imageData as! Data)
+                    self.birdImageView.layer.cornerRadius = self.birdImageView.frame.width/2
+                }
+            }
         }
     }
     

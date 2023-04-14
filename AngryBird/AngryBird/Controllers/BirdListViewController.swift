@@ -32,6 +32,18 @@ class BirdListViewController: UIViewController{
         
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard
+            let destination = segue.destination as? DetailViewController,
+            let selectedIndexPath = self.tableView.indexPathForSelectedRow,
+            let confirmed = self.tableView.cellForRow(at: selectedIndexPath) as? BirdCell else {return}
+        
+        let confirmedBird = confirmed.bird
+        destination.bird = confirmedBird
+                    
+                
+        
+    }
 }
 
 extension BirdListViewController: UITableViewDataSource {
@@ -56,43 +68,43 @@ extension BirdListViewController: UITableViewDataSource {
 extension BirdListViewController: UITableViewDelegate {
     //MARK: Delegate
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if
-            let cell = self.tableView.cellForRow(at: indexPath) as? BirdCell,
-            let confirmedBird = cell.bird
-        {
-            confirmedBird.confirmedSighting = true
-            cell.accessoryType = confirmedBird.confirmedSighting ? .checkmark : .none
-        }
-    }
-    
-    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-        
-        let cell = self.tableView.cellForRow(at: indexPath) as! BirdCell
-        let img = UIImageView(frame:CGRect(x: 0, y: 65, width: 25, height: 30))
-        img.image = UIImage(systemName: "star.fill")
-        img.tintColor = .systemYellow
-        
-        
-        let confirmedAction = UIContextualAction(style: .normal, title:"Confirmed"){
-            (action, view, completionHandler) in cell.accessoryView = img
-            completionHandler(true)
-        }
-        let cancelAction = UIContextualAction(style: .normal, title:"Cancel"){
-            (action, view, completionHandler) in cell.accessoryView = .none
-            completionHandler(true)
-        }
-        
-        confirmedAction.backgroundColor = UIColor.brown
-        confirmedAction.image = UIImage(named: "heart")
-        
-        
-        
-        cancelAction.backgroundColor = UIColor.gray
-        let act = UISwipeActionsConfiguration(actions: [cancelAction,confirmedAction])
-        act.performsFirstActionWithFullSwipe = false
-        return act
-    }
+//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        if
+//            let cell = self.tableView.cellForRow(at: indexPath) as? BirdCell,
+//            let confirmedBird = cell.bird
+//        {
+//            confirmedBird.confirmedSighting = true
+//            cell.accessoryType = confirmedBird.confirmedSighting ? .checkmark : .none
+//        }
+//    }
+//
+//    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+//
+//        let cell = self.tableView.cellForRow(at: indexPath) as! BirdCell
+//        let img = UIImageView(frame:CGRect(x: 0, y: 65, width: 25, height: 30))
+//        img.image = UIImage(systemName: "sun.max.fill")
+//        img.tintColor = .systemYellow
+//
+//
+//        let confirmedAction = UIContextualAction(style: .normal, title:"Confirmed"){
+//            (action, view, completionHandler) in cell.accessoryView = img
+//            completionHandler(true)
+//        }
+//        let cancelAction = UIContextualAction(style: .normal, title:"Cancel"){
+//            (action, view, completionHandler) in cell.accessoryView = .none
+//            completionHandler(true)
+//        }
+//
+//        confirmedAction.backgroundColor = UIColor.brown
+//        confirmedAction.image = UIImage(named: "heart")
+//
+//
+//
+//        cancelAction.backgroundColor = UIColor.gray
+//        let act = UISwipeActionsConfiguration(actions: [cancelAction,confirmedAction])
+//        act.performsFirstActionWithFullSwipe = false
+//        return act
+//    }
     
     
 }
