@@ -9,11 +9,19 @@ import UIKit
 
 class DetailViewController: UIViewController {
 
+    @IBOutlet weak var whaleLabel: UILabel!
+    
+    @IBOutlet weak var descriptionLabel: UILabel!
+    
+    @IBOutlet weak var habitatLabel: UILabel!
     var bird: Bird!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        self.whaleLabel.text = "Orca"
+        self.descriptionLabel.text = "Killer whale"
+        self.habitatLabel.text = "From Arctic"
     }
     
 
