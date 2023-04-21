@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D16A33C529EFBDD5008490B7 /* BirdServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16A33C429EFBDD5008490B7 /* BirdServiceTests.swift */; };
+		D16A33C729F270E7008490B7 /* BirdTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16A33C629F270E7008490B7 /* BirdTest.swift */; };
 		D172873C29D6DEF2006DA326 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D172873B29D6DEF2006DA326 /* AppDelegate.swift */; };
 		D172873E29D6DEF2006DA326 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D172873D29D6DEF2006DA326 /* SceneDelegate.swift */; };
 		D172874029D6DEF2006DA326 /* BirdListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D172873F29D6DEF2006DA326 /* BirdListViewController.swift */; };
@@ -41,6 +43,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D16A33C429EFBDD5008490B7 /* BirdServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirdServiceTests.swift; sourceTree = "<group>"; };
+		D16A33C629F270E7008490B7 /* BirdTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirdTest.swift; sourceTree = "<group>"; };
 		D172873829D6DEF2006DA326 /* AngryBird.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AngryBird.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D172873B29D6DEF2006DA326 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D172873D29D6DEF2006DA326 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -127,6 +131,8 @@
 			isa = PBXGroup;
 			children = (
 				D172875529D6DEF3006DA326 /* AngryBirdTests.swift */,
+				D16A33C429EFBDD5008490B7 /* BirdServiceTests.swift */,
+				D16A33C629F270E7008490B7 /* BirdTest.swift */,
 			);
 			path = AngryBirdTests;
 			sourceTree = "<group>";
@@ -312,6 +318,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D16A33C729F270E7008490B7 /* BirdTest.swift in Sources */,
+				D16A33C529EFBDD5008490B7 /* BirdServiceTests.swift in Sources */,
 				D172875629D6DEF3006DA326 /* AngryBirdTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
