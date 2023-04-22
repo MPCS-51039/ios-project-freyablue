@@ -27,12 +27,12 @@ final class BirdServiceTests: XCTestCase {
         var error: Error?
         let promise = expectation(description: "Completion handler is invoked")
         //when
-//        self.systemUnderTest.getBirds(completion:{ data, shouldntHappen in
-//            birds = data
-//            error = shouldntHappen
-//            promise.fulfill()
-//
-//        })
+        self.systemUnderTest.getBirds(completion:{ data, shouldntHappen in
+            birds = data
+            error = shouldntHappen
+            promise.fulfill()
+
+        })
         wait(for: [promise], timeout: 5)
         
         //THEN
