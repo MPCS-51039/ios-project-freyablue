@@ -14,7 +14,7 @@ enum BirdCallingError: Error {
 }
 class BirdService{
     //private let urlString = "https://www.mocky.io/v2/5e9d1faf30000022cb0a80e1"
-    private let urlString = "https://run.mocky.io/v3/9621149e-1311-4c52-be0d-6b13d8660e76"
+    private let urlString = "https://run.mocky.io/v3/954b7c30-2d7c-422d-a79a-1e1cea238af8"
     func getBirds(completion: @escaping ([Bird]?, Error?) -> ()){
         guard let url = URL(string:self.urlString) else{
             DispatchQueue.main.async { completion(nil,
@@ -31,7 +31,8 @@ class BirdService{
             }
             
             do {
-                let birdResult = try JSONDecoder().decode(BirdResult.self, from: data)
+                let birdResult = try
+                JSONDecoder().decode(BirdResult.self, from: data)
                 DispatchQueue.main.async {
                     completion(birdResult.birds, nil)}
             } catch (let error){
