@@ -37,8 +37,13 @@ class BirdListViewController: UIViewController{
         confirmedService.getBirds(completion: { birds, error in
             guard let birds = birds, error == nil else{
                 print(error)
-                if(birds == nil && confirmedService.hasProblemUrl==true) {
-                    let my_alert = UIAlertController(title: "Alert", message: "Wrong Url", preferredStyle: .alert)
+                if(birds == nil && confirmedService.wrongUrl==true) {
+                    let my_alert = UIAlertController(title: "Alert", message: "API call doesn't work, unable to fetch instances", preferredStyle: .alert)
+                    my_alert.addAction(UIAlertAction(title: "OK", style: .default))
+                    self.present(my_alert, animated: true, completion:{return})
+                }
+                if(birds == nil && confirmedService.emptyContent==true) {
+                    let my_alert = UIAlertController(title: "Alert", message: "Empty Content", preferredStyle: .alert)
                     my_alert.addAction(UIAlertAction(title: "OK", style: .default))
                     self.present(my_alert, animated: true, completion:{return})
                 }
