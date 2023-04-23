@@ -2,34 +2,60 @@
 //  BirdListViewControllerTests.swift
 //  AngryBirdTests
 //
-//  Created by Yijia chen on 2023/4/21.
+//  Created by Yijia chen on 2023/4/23.
 //
 
 import XCTest
+@testable import AngryBird
 
-final class BirdListViewControllerTests: XCTestCase {
+class BirdListViewControllerTests: XCTestCase {
+    var systemUnderTest: BirdListViewController!
 
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    override func setUp() {
+        super.setUp()
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        let navigationController = storyboard.instantiateInitialViewController() as! UINavigationController
+        self.systemUnderTest = navigationController.topViewController as? BirdListViewController
+        
+        UIApplication.shared.windows
+            .filter { $0.isKeyWindow }
+            .first!
+            .rootViewController = self.systemUnderTest
+        
+        XCTAssertNotNil(navigationController.view)
+        XCTAssertNotNil(self.systemUnderTest.view)
     }
 
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    func testTableView_loadsBirds() {
+        //Given
+        let mockBirdService = MockBirdService()
+        let mockBirds = [
+            Bird(named: "Oriole", description: "Angry", imageURL: "birds.com/angryoriole"),
+            Bird(named: "Cardinal", description: "Angry", imageURL: "birds.com/angrycardinal"),
+            Bird(named: "Robin", description: "Angry", imageURL: "birds.com/angryrobin"),
+        ]
+        mockBirdService.mockBirds = mockBirds
+        
+        self.systemUnderTest.viewDidLoad()
+        self.systemUnderTest.birdService = mockBirdService
+        
+        XCTAssertEqual(0, self.systemUnderTest.tableView.numberOfRows(inSection: 0))
+        
+        //When
+        self.systemUnderTest.viewWillAppear(false)
+        
+        //Then
+        XCTAssertEqual(mockBirds.count, self.systemUnderTest.flock.count)
+        XCTAssertEqual(mockBirds.count, self.systemUnderTest.tableView.numberOfRows(inSection: 0))
     }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
-    }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+    
+    class MockBirdService: BirdService {
+        var mockBirds: [Bird]?
+        var mockError: Error?
+        
+        override func getBirds(completion: @escaping ([Bird]?, Error?) -> ()) {
+            completion(mockBirds, mockError)
         }
     }
-
 }

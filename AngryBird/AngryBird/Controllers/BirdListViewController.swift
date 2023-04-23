@@ -22,20 +22,33 @@ class BirdListViewController: UIViewController{
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         self.birdService = BirdService()
-        self.birdService.getBirds(completion: { birds, error in
-            guard let birds = birds, error == nil else{
-                return
-            }
-            self.flock = birds
-            self.tableView.reloadData()
-            
-        })
+        
         
         
         self.tableView.dataSource = self
         self.tableView.delegate = self
         
         self.navigationController?.navigationBar.prefersLargeTitles = true
+        
+    }
+    
+    override func viewWillAppear(_ animated:Bool){
+        guard let confirmedService = self.birdService else {return}
+        confirmedService.getBirds(completion: { birds, error in
+            guard let birds = birds, error == nil else{
+                print(error)
+                if(birds == nil && confirmedService.hasProblemUrl==true) {
+                    let my_alert = UIAlertController(title: "Alert", message: "Wrong Url", preferredStyle: .alert)
+                    my_alert.addAction(UIAlertAction(title: "OK", style: .default))
+                    self.present(my_alert, animated: true, completion:{return})
+                }
+                
+                return
+            }
+            self.flock = birds
+            self.tableView.reloadData()
+            
+        })
         
     }
     

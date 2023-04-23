@@ -14,11 +14,19 @@ enum BirdCallingError: Error {
 }
 class BirdService{
     //private let urlString = "https://www.mocky.io/v2/5e9d1faf30000022cb0a80e1"
-    private let urlString = "https://run.mocky.io/v3/954b7c30-2d7c-422d-a79a-1e1cea238af8"
+    //my data
+    //private let urlString = "https://run.mocky.io/v3/954b7c30-2d7c-422d-a79a-1e1cea238af8"
+    //empty list from API
+    private let urlString = "https://run.mocky.io/v3/81bb3340-3779-4ead-9e2d-2cafffde0f40"
+    //API doesn't work
+    
+    var hasProblemUrl = false
+    
     func getBirds(completion: @escaping ([Bird]?, Error?) -> ()){
         guard let url = URL(string:self.urlString) else{
             DispatchQueue.main.async { completion(nil,
                 BirdCallingError.problemGeneratingURL)}
+            self.hasProblemUrl = true
             return
         }
         let request = URLRequest(url:url)
