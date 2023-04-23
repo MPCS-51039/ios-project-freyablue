@@ -1,0 +1,3 @@
+[submodule "angry"]
+	path = angry
+	url = https://github.com/freyablue/angry-birds.git
