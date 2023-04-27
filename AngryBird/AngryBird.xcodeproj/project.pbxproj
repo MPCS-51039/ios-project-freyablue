@@ -10,12 +10,12 @@
 		D16A33C529EFBDD5008490B7 /* BirdServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16A33C429EFBDD5008490B7 /* BirdServiceTests.swift */; };
 		D16A33C729F270E7008490B7 /* BirdTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16A33C629F270E7008490B7 /* BirdTest.swift */; };
 		D16A33CD29F5736D008490B7 /* BirdListViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16A33CC29F5736D008490B7 /* BirdListViewControllerTests.swift */; };
+		D16A33CF29FACFE9008490B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D172874729D6DEF3006DA326 /* Assets.xcassets */; };
 		D172873C29D6DEF2006DA326 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D172873B29D6DEF2006DA326 /* AppDelegate.swift */; };
 		D172873E29D6DEF2006DA326 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D172873D29D6DEF2006DA326 /* SceneDelegate.swift */; };
 		D172874029D6DEF2006DA326 /* BirdListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D172873F29D6DEF2006DA326 /* BirdListViewController.swift */; };
 		D172874329D6DEF2006DA326 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D172874129D6DEF2006DA326 /* Main.storyboard */; };
 		D172874629D6DEF2006DA326 /* AngryBird.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D172874429D6DEF2006DA326 /* AngryBird.xcdatamodeld */; };
-		D172874829D6DEF3006DA326 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D172874729D6DEF3006DA326 /* Assets.xcassets */; };
 		D172874B29D6DEF3006DA326 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D172874929D6DEF3006DA326 /* LaunchScreen.storyboard */; };
 		D172875629D6DEF3006DA326 /* AngryBirdTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D172875529D6DEF3006DA326 /* AngryBirdTests.swift */; };
 		D172876029D6DEF3006DA326 /* AngryBirdUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D172875F29D6DEF3006DA326 /* AngryBirdUITests.swift */; };
@@ -280,7 +280,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D172874B29D6DEF3006DA326 /* LaunchScreen.storyboard in Resources */,
-				D172874829D6DEF3006DA326 /* Assets.xcassets in Resources */,
+				D16A33CF29FACFE9008490B7 /* Assets.xcassets in Resources */,
 				D172874329D6DEF2006DA326 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

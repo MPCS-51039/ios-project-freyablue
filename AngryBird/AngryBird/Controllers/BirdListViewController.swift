@@ -11,6 +11,7 @@ class BirdListViewController: UIViewController{
     
     
 
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -21,6 +22,8 @@ class BirdListViewController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        
         self.birdService = BirdService()
         
         
@@ -29,10 +32,15 @@ class BirdListViewController: UIViewController{
         self.tableView.delegate = self
         
         self.navigationController?.navigationBar.prefersLargeTitles = true
+        activityIndicator.startAnimating()
+        activityIndicator.hidesWhenStopped = true
         
     }
     
     override func viewWillAppear(_ animated:Bool){
+        
+        
+        
         guard let confirmedService = self.birdService else {return}
         confirmedService.getBirds(completion: { birds, error in
             guard let birds = birds, error == nil else{
@@ -51,9 +59,12 @@ class BirdListViewController: UIViewController{
                 return
             }
             self.flock = birds
+            
             self.tableView.reloadData()
             
         })
+        
+        
         
     }
     
@@ -80,10 +91,12 @@ extension BirdListViewController: UITableViewDataSource {
     
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         let cell = self.tableView.dequeueReusableCell(withIdentifier: "birdCell") as! BirdCell
         let curr = self.flock[indexPath.row]
         
         cell.bird = curr
+        activityIndicator.stopAnimating()
         
         return cell
     }
