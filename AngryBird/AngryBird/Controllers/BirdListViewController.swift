@@ -15,8 +15,12 @@ class BirdListViewController: UIViewController{
     
     @IBOutlet weak var tableView: UITableView!
     
+    let searchController = UISearchController(searchResultsController: nil)
+    
     var flock:[Bird] = []
     var birdService: BirdService!
+    var searching = false
+    var searchedWhale:[Bird] = []
     
     
     override func viewDidLoad() {
@@ -31,9 +35,24 @@ class BirdListViewController: UIViewController{
         self.tableView.dataSource = self
         self.tableView.delegate = self
         
+        
         self.navigationController?.navigationBar.prefersLargeTitles = true
         activityIndicator.startAnimating()
         activityIndicator.hidesWhenStopped = true
+        configureSearchController()
+        
+    }
+    private func configureSearchController(){
+        searchController.loadViewIfNeeded()
+        searchController.searchResultsUpdater = self
+        searchController.searchBar.delegate = self
+        searchController.obscuresBackgroundDuringPresentation = false
+        searchController.searchBar.enablesReturnKeyAutomatically = false
+        searchController.searchBar.returnKeyType = UIReturnKeyType.done
+        self.navigationItem.searchController = searchController
+        self.navigationItem.hidesSearchBarWhenScrolling = false
+        definesPresentationContext = true
+        searchController.searchBar.placeholder = "Search Whale by name"
         
     }
     
@@ -82,23 +101,62 @@ class BirdListViewController: UIViewController{
     }
 }
 
-extension BirdListViewController: UITableViewDataSource {
+extension BirdListViewController: UITableViewDataSource, UISearchBarDelegate, UISearchResultsUpdating {
+    public func updateSearchResults(for searchController: UISearchController) {
+        let searchText = searchController.searchBar.text!
+        if !searchText.isEmpty{
+            searching = true
+            searchedWhale.removeAll()
+            for whale in self.flock{
+                if whale.name.lowercased().contains(searchText.lowercased()){
+                    searchedWhale.append(whale)
+                }
+            }
+        }
+        else{
+            searching=false
+            searchedWhale.removeAll()
+            searchedWhale = self.flock
+        }
+        tableView.reloadData()
+    }
+    
     //MARK: DataSource
     
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.flock.count
+        if searching{
+            return searchedWhale.count
+        }
+        else{
+            return self.flock.count
+        }
     }
     
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = self.tableView.dequeueReusableCell(withIdentifier: "birdCell") as! BirdCell
+       
         let curr = self.flock[indexPath.row]
+        if searching
+        {
+            cell.bird = searchedWhale[indexPath.row]
+        }
+        else{
+            cell.bird = curr
+            
+        }
         
-        cell.bird = curr
+        
         activityIndicator.stopAnimating()
         
         return cell
+    }
+    
+    public func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        searching = false
+        searchedWhale.removeAll()
+        
     }
     
 }
