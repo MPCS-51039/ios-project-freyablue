@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D113C31B2A1CD2D000506DFB /* NoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D113C31A2A1CD2D000506DFB /* NoteView.swift */; };
+		D113C31D2A1CD4B800506DFB /* HeartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D113C31C2A1CD4B800506DFB /* HeartView.swift */; };
+		D113C31F2A1CD56800506DFB /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D113C31E2A1CD56800506DFB /* AboutView.swift */; };
 		D16A33C529EFBDD5008490B7 /* BirdServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16A33C429EFBDD5008490B7 /* BirdServiceTests.swift */; };
 		D16A33C729F270E7008490B7 /* BirdTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16A33C629F270E7008490B7 /* BirdTest.swift */; };
 		D16A33CD29F5736D008490B7 /* BirdListViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16A33CC29F5736D008490B7 /* BirdListViewControllerTests.swift */; };
@@ -44,6 +47,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D113C31A2A1CD2D000506DFB /* NoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteView.swift; sourceTree = "<group>"; };
+		D113C31C2A1CD4B800506DFB /* HeartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartView.swift; sourceTree = "<group>"; };
+		D113C31E2A1CD56800506DFB /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
 		D16A33C429EFBDD5008490B7 /* BirdServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirdServiceTests.swift; sourceTree = "<group>"; };
 		D16A33C629F270E7008490B7 /* BirdTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirdTest.swift; sourceTree = "<group>"; };
 		D16A33CC29F5736D008490B7 /* BirdListViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirdListViewControllerTests.swift; sourceTree = "<group>"; };
@@ -162,6 +168,9 @@
 			children = (
 				D172873F29D6DEF2006DA326 /* BirdListViewController.swift */,
 				D172877829E94C24006DA326 /* DetailViewController.swift */,
+				D113C31A2A1CD2D000506DFB /* NoteView.swift */,
+				D113C31C2A1CD4B800506DFB /* HeartView.swift */,
+				D113C31E2A1CD56800506DFB /* AboutView.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -308,12 +317,15 @@
 			files = (
 				D172874629D6DEF2006DA326 /* AngryBird.xcdatamodeld in Sources */,
 				D172874029D6DEF2006DA326 /* BirdListViewController.swift in Sources */,
+				D113C31F2A1CD56800506DFB /* AboutView.swift in Sources */,
 				D172876F29D8D08B006DA326 /* BirdCell.swift in Sources */,
+				D113C31D2A1CD4B800506DFB /* HeartView.swift in Sources */,
 				D172873C29D6DEF2006DA326 /* AppDelegate.swift in Sources */,
 				D172877329DEA991006DA326 /* BirdService.swift in Sources */,
 				D172877129DEA33F006DA326 /* Bird.swift in Sources */,
 				D172873E29D6DEF2006DA326 /* SceneDelegate.swift in Sources */,
 				D172877929E94C24006DA326 /* DetailViewController.swift in Sources */,
+				D113C31B2A1CD2D000506DFB /* NoteView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

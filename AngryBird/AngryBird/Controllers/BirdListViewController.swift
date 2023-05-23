@@ -7,6 +7,35 @@
 
 import UIKit
 
+//class TabBarController:UITabBarController{
+//
+//    @IBInspectable var initialIndex:Int = 1
+//
+//    override func viewDidLoad() {
+//        super.viewDidLoad()
+//        selectedIndex = initialIndex
+//        view.backgroundColor = .lightGray
+//        let vc1 = BirdListViewController()
+//        let vc2 = SecondViewController()
+//        let vc3 = ThirdViewController()
+//        let vc4 = FourthViewController()
+//        vc1.title = "Cell"
+//        vc2.title = "Home"
+//        vc3.title = "Favourite"
+//        vc4.title = "About"
+//        self.setViewControllers([vc1, vc2,vc3,vc4], animated: false)
+//        guard let items = self.tabBar.items else { return }
+//        let icon_images = ["heart","house","star","bell"]
+//        for x in 0...3 {
+//            items[x].image = UIImage(systemName: icon_images[x])
+//        }
+//        self.tabBar.tintColor = .black
+//
+//        present(self,animated: true)
+//    }
+//
+//
+//}
 class BirdListViewController: UIViewController{
     
     
@@ -25,12 +54,8 @@ class BirdListViewController: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        
         
         self.birdService = BirdService()
-        
-        
         
         self.tableView.dataSource = self
         self.tableView.delegate = self
@@ -39,9 +64,20 @@ class BirdListViewController: UIViewController{
         self.navigationController?.navigationBar.prefersLargeTitles = true
         activityIndicator.startAnimating()
         activityIndicator.hidesWhenStopped = true
+        
+        
+//
+       
+//
+
+                
         configureSearchController()
         
+        
+        
     }
+    
+    
     private func configureSearchController(){
         searchController.loadViewIfNeeded()
         searchController.searchResultsUpdater = self
@@ -63,7 +99,7 @@ class BirdListViewController: UIViewController{
         guard let confirmedService = self.birdService else {return}
         confirmedService.getBirds(completion: { birds, error in
             guard let birds = birds, error == nil else{
-                print(error)
+                //print(error)
                 if(birds == nil && confirmedService.wrongUrl==true) {
                     let my_alert = UIAlertController(title: "Alert", message: "API call doesn't work, unable to fetch instances", preferredStyle: .alert)
                     my_alert.addAction(UIAlertAction(title: "OK", style: .default))
@@ -100,6 +136,28 @@ class BirdListViewController: UIViewController{
         
     }
 }
+
+class SecondViewController: UIViewController{
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        view.backgroundColor = .lightGray
+    }
+}
+
+class ThirdViewController: UIViewController{
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        view.backgroundColor = .systemBlue
+    }
+}
+
+class FourthViewController: UIViewController{
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        view.backgroundColor = .green
+    }
+}
+
 
 extension BirdListViewController: UITableViewDataSource, UISearchBarDelegate, UISearchResultsUpdating {
     public func updateSearchResults(for searchController: UISearchController) {

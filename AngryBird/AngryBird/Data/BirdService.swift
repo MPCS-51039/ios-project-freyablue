@@ -15,7 +15,8 @@ enum BirdCallingError: Error {
 class BirdService{
     
     //my data
-    private let urlString = "https://run.mocky.io/v3/954b7c30-2d7c-422d-a79a-1e1cea238af8"
+    private let urlString = "https://run.mocky.io/v3/3638a6f7-baaa-4c69-abd8-ff883c95fd20"
+    //private let urlString = "https://run.mocky.io/v3/954b7c30-2d7c-422d-a79a-1e1cea238af8"
     //empty list from API
     //private let urlString = "https://run.mocky.io/v3/81bb3340-3779-4ead-9e2d-2cafffde0f40"
     //wrong url

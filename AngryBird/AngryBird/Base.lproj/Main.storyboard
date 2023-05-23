@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jXV-Tk-xH5">
-                                <rect key="frame" x="0.0" y="143" width="375" height="669"/>
+                                <rect key="frame" x="0.0" y="91" width="375" height="721"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="birdCell" rowHeight="90" id="4Ko-3r-qCR" customClass="BirdCell" customModule="AngryBird" customModuleProvider="target">
@@ -31,13 +31,13 @@
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="NH7-ho-WHS">
                                                     <rect key="frame" x="119" y="19.000000000000004" width="48" height="52.333333333333343"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sjt-Pv-p5c" userLabel="birdName">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sjt-Pv-p5c" userLabel="birdName">
                                                             <rect key="frame" x="0.0" y="0.0" width="48" height="24"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vnl-L4-UAH" userLabel="birdDescription">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vnl-L4-UAH" userLabel="birdDescription">
                                                             <rect key="frame" x="0.0" y="32" width="41.333333333333336" height="20.333333333333329"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
@@ -77,26 +77,29 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="sjp-zS-pTq"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="AeZ-h7-xbl"/>
+                                </connections>
                             </tableView>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="70y-Cd-BLq">
-                                <rect key="frame" x="20" y="153" width="306" height="20"/>
+                                <rect key="frame" x="20" y="101" width="335" height="20"/>
                             </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="jXV-Tk-xH5" firstAttribute="top" secondItem="70y-Cd-BLq" secondAttribute="bottom" constant="-30" id="1Wu-bP-hlv"/>
-                            <constraint firstItem="70y-Cd-BLq" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="CH1-Wq-HtO"/>
                             <constraint firstItem="70y-Cd-BLq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="GMZ-Ls-zvX"/>
                             <constraint firstItem="jXV-Tk-xH5" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="M6y-c4-RFb"/>
                             <constraint firstAttribute="bottom" secondItem="jXV-Tk-xH5" secondAttribute="bottom" id="P1b-o2-o9h"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="70y-Cd-BLq" secondAttribute="trailing" constant="20" id="S4L-3P-n5L"/>
                             <constraint firstItem="jXV-Tk-xH5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="WNf-gg-q5Z"/>
                             <constraint firstItem="jXV-Tk-xH5" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="X3z-Gx-bWb"/>
-                            <constraint firstItem="jXV-Tk-xH5" firstAttribute="leading" secondItem="70y-Cd-BLq" secondAttribute="trailing" constant="-326" id="eah-gF-Byt"/>
                             <constraint firstItem="70y-Cd-BLq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="zGC-BD-aRD"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Home" image="house.fill" catalog="system" id="rES-cf-77W"/>
                     <navigationItem key="navigationItem" title="Whale Encyclopedia" id="twC-5x-vwh"/>
                     <connections>
                         <outlet property="activityIndicator" destination="70y-Cd-BLq" id="z4H-vP-2zo"/>
@@ -120,7 +123,7 @@
                     </prototypes>
                 </tableView>
             </objects>
-            <point key="canvasLocation" x="972" y="-2.2167487684729066"/>
+            <point key="canvasLocation" x="870" y="-2"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="5gm-oP-X3M">
@@ -262,10 +265,110 @@
             </objects>
             <point key="canvasLocation" x="1671.2" y="-2.2167487684729066"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Note-->
+        <scene sceneID="nnK-Ae-LWE">
+            <objects>
+                <viewController id="Xuv-LD-wzC" customClass="NoteView" customModule="AngryBird" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Yz8-IP-W3H">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="KFL-5v-k5S"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Note" image="note.text" catalog="system" id="ILo-zr-qw6"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CVv-HJ-Igs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-884" y="557"/>
+        </scene>
+        <!--Heart-->
+        <scene sceneID="3B9-oM-dNK">
+            <objects>
+                <viewController id="gSr-4z-pSQ" customClass="HeartView" customModule="AngryBird" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TL1-3N-YgD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="40" estimatedRowHeight="-1" sectionHeaderHeight="28" estimatedSectionHeaderHeight="-1" sectionFooterHeight="28" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="OJd-O1-VOk">
+                                <rect key="frame" x="0.0" y="47" width="375" height="682"/>
+                                <color key="separatorColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="GRt-K4-GNa">
+                                        <rect key="frame" x="0.0" y="50" width="375" height="40"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="GRt-K4-GNa" id="Pc7-Q9-qqA" customClass="UITextView">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="40"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="gSr-4z-pSQ" id="DNi-L1-gNw"/>
+                                    <outlet property="delegate" destination="gSr-4z-pSQ" id="Ty8-17-i0s"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="fkX-uu-GbB"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="OJd-O1-VOk" firstAttribute="top" secondItem="fkX-uu-GbB" secondAttribute="top" id="cjd-aZ-awP"/>
+                            <constraint firstItem="OJd-O1-VOk" firstAttribute="trailing" secondItem="fkX-uu-GbB" secondAttribute="trailing" id="dT7-bb-96P"/>
+                            <constraint firstItem="OJd-O1-VOk" firstAttribute="bottom" secondItem="fkX-uu-GbB" secondAttribute="bottom" id="ejQ-Ws-4QJ"/>
+                            <constraint firstItem="OJd-O1-VOk" firstAttribute="leading" secondItem="fkX-uu-GbB" secondAttribute="leading" id="iA4-dE-wOq"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Heart" image="heart.fill" catalog="system" id="8xi-4K-tcr"/>
+                    <connections>
+                        <outlet property="mtTableView" destination="OJd-O1-VOk" id="w77-xW-9Iv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3T5-Bj-fyC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="61" y="664"/>
+        </scene>
+        <!--About-->
+        <scene sceneID="lQi-OE-Cl2">
+            <objects>
+                <viewController id="XyU-WI-sem" customClass="AboutView" customModule="AngryBird" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZJ7-pA-aeF" colorLabel="IBBuiltInLabel-Orange">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="IpE-Vi-NJO"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="About" image="questionmark.circle" catalog="system" id="yKX-ku-lbX"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="whf-1K-WaE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-884" y="-51"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="LoL-zn-pGQ">
+            <objects>
+                <tabBarController id="1da-CN-lPz" customClass="TabBarController" customModule="AngryBird" customModuleProvider="target" colorLabel="IBBuiltInLabel-Orange" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="7ZJ-7p-Ndn">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" systemColor="systemGray4Color"/>
+                        <color key="tintColor" systemColor="linkColor"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="XyU-WI-sem" kind="relationship" relationship="viewControllers" id="swn-E2-BeU"/>
+                        <segue destination="Xuv-LD-wzC" kind="relationship" relationship="viewControllers" id="Lr7-Sx-1yU"/>
+                        <segue destination="gSr-4z-pSQ" kind="relationship" relationship="viewControllers" id="rCV-wH-PQK"/>
+                        <segue destination="hdV-F8-CWO" kind="relationship" relationship="viewControllers" id="zkh-FM-NLT"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="F9e-sC-bAA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1898" y="274"/>
+        </scene>
+        <!--Item-->
         <scene sceneID="vOA-bD-QZr">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RWw-zV-QQm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hdV-F8-CWO" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="s4b-gM-WmB"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="qeY-og-ZgL">
                         <rect key="frame" x="0.0" y="47" width="375" height="96"/>
@@ -277,16 +380,25 @@
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="xyD-Du-43P"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="RWw-zV-QQm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="46.564885496183201" y="-2.1126760563380285"/>
         </scene>
     </scenes>
     <resources>
         <image name="Killerwhales" width="2186" height="1453"/>
+        <image name="heart.fill" catalog="system" width="128" height="107"/>
+        <image name="house.fill" catalog="system" width="128" height="104"/>
+        <image name="note.text" catalog="system" width="128" height="107"/>
         <image name="person.circle.fill" catalog="system" width="128" height="123"/>
+        <image name="questionmark.circle" catalog="system" width="128" height="123"/>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray4Color">
+            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemYellowColor">
             <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
