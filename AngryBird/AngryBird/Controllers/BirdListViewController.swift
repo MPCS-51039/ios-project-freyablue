@@ -56,21 +56,18 @@ class BirdListViewController: UIViewController{
         super.viewDidLoad()
         
         self.birdService = BirdService()
-        
+
         self.tableView.dataSource = self
         self.tableView.delegate = self
-        
-        
-        self.navigationController?.navigationBar.prefersLargeTitles = true
+
+
+
         activityIndicator.startAnimating()
         activityIndicator.hidesWhenStopped = true
-        
-        
-//
-       
-//
 
-                
+
+
+
         configureSearchController()
         
         
@@ -110,11 +107,11 @@ class BirdListViewController: UIViewController{
                     my_alert.addAction(UIAlertAction(title: "OK", style: .default))
                     self.present(my_alert, animated: true, completion:{return})
                 }
-                
+
                 return
             }
             self.flock = birds
-            
+
             self.tableView.reloadData()
             
         })
@@ -137,26 +134,7 @@ class BirdListViewController: UIViewController{
     }
 }
 
-class SecondViewController: UIViewController{
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        view.backgroundColor = .lightGray
-    }
-}
 
-class ThirdViewController: UIViewController{
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        view.backgroundColor = .systemBlue
-    }
-}
-
-class FourthViewController: UIViewController{
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        view.backgroundColor = .green
-    }
-}
 
 
 extension BirdListViewController: UITableViewDataSource, UISearchBarDelegate, UISearchResultsUpdating {
@@ -178,9 +156,9 @@ extension BirdListViewController: UITableViewDataSource, UISearchBarDelegate, UI
         }
         tableView.reloadData()
     }
-    
+
     //MARK: DataSource
-    
+
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if searching{
             return searchedWhale.count
@@ -189,12 +167,12 @@ extension BirdListViewController: UITableViewDataSource, UISearchBarDelegate, UI
             return self.flock.count
         }
     }
-    
-    
+
+
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
+
         let cell = self.tableView.dequeueReusableCell(withIdentifier: "birdCell") as! BirdCell
-       
+
         let curr = self.flock[indexPath.row]
         if searching
         {
@@ -202,21 +180,21 @@ extension BirdListViewController: UITableViewDataSource, UISearchBarDelegate, UI
         }
         else{
             cell.bird = curr
-            
+
         }
-        
-        
+
+
         activityIndicator.stopAnimating()
-        
+
         return cell
     }
-    
+
     public func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         searching = false
         searchedWhale.removeAll()
-        
+
     }
-    
+
 }
 
 extension BirdListViewController: UITableViewDelegate {

@@ -8,11 +8,17 @@
 import UIKit
 
 class AboutView: UIViewController {
+    
 
+    @IBOutlet weak var bg: UIImageView!
+    
+    @IBOutlet weak var myText: UITextView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        bg.loadGif(name: "whale")
     }
     
 

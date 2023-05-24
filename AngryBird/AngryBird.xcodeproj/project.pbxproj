@@ -10,6 +10,11 @@
 		D113C31B2A1CD2D000506DFB /* NoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D113C31A2A1CD2D000506DFB /* NoteView.swift */; };
 		D113C31D2A1CD4B800506DFB /* HeartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D113C31C2A1CD4B800506DFB /* HeartView.swift */; };
 		D113C31F2A1CD56800506DFB /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D113C31E2A1CD56800506DFB /* AboutView.swift */; };
+		D113C3212A1DE50E00506DFB /* EntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D113C3202A1DE50E00506DFB /* EntryViewController.swift */; };
+		D113C3232A1DE54C00506DFB /* NoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D113C3222A1DE54C00506DFB /* NoteViewController.swift */; };
+		D113C3252A1E249200506DFB /* gifToImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D113C3242A1E249200506DFB /* gifToImage.swift */; };
+		D113C3272A1E251500506DFB /* whale.gif in Resources */ = {isa = PBXBuildFile; fileRef = D113C3262A1E251500506DFB /* whale.gif */; };
+		D113C3292A1E3E9100506DFB /* whalebg.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = D113C3282A1E3E9100506DFB /* whalebg.jpeg */; };
 		D16A33C529EFBDD5008490B7 /* BirdServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16A33C429EFBDD5008490B7 /* BirdServiceTests.swift */; };
 		D16A33C729F270E7008490B7 /* BirdTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16A33C629F270E7008490B7 /* BirdTest.swift */; };
 		D16A33CD29F5736D008490B7 /* BirdListViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16A33CC29F5736D008490B7 /* BirdListViewControllerTests.swift */; };
@@ -27,6 +32,7 @@
 		D172877129DEA33F006DA326 /* Bird.swift in Sources */ = {isa = PBXBuildFile; fileRef = D172877029DEA33F006DA326 /* Bird.swift */; };
 		D172877329DEA991006DA326 /* BirdService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D172877229DEA991006DA326 /* BirdService.swift */; };
 		D172877929E94C24006DA326 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D172877829E94C24006DA326 /* DetailViewController.swift */; };
+		D1DCE2422A1EC095001896C2 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1DCE2412A1EC095001896C2 /* WebViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +56,11 @@
 		D113C31A2A1CD2D000506DFB /* NoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteView.swift; sourceTree = "<group>"; };
 		D113C31C2A1CD4B800506DFB /* HeartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartView.swift; sourceTree = "<group>"; };
 		D113C31E2A1CD56800506DFB /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
+		D113C3202A1DE50E00506DFB /* EntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryViewController.swift; sourceTree = "<group>"; };
+		D113C3222A1DE54C00506DFB /* NoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteViewController.swift; sourceTree = "<group>"; };
+		D113C3242A1E249200506DFB /* gifToImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gifToImage.swift; sourceTree = "<group>"; };
+		D113C3262A1E251500506DFB /* whale.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = whale.gif; path = ../../../../whale.gif; sourceTree = "<group>"; };
+		D113C3282A1E3E9100506DFB /* whalebg.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = whalebg.jpeg; path = AngryBird/Assets.xcassets/whalebg.jpeg; sourceTree = SOURCE_ROOT; };
 		D16A33C429EFBDD5008490B7 /* BirdServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirdServiceTests.swift; sourceTree = "<group>"; };
 		D16A33C629F270E7008490B7 /* BirdTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirdTest.swift; sourceTree = "<group>"; };
 		D16A33CC29F5736D008490B7 /* BirdListViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirdListViewControllerTests.swift; sourceTree = "<group>"; };
@@ -71,6 +82,7 @@
 		D172877029DEA33F006DA326 /* Bird.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bird.swift; sourceTree = "<group>"; };
 		D172877229DEA991006DA326 /* BirdService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirdService.swift; sourceTree = "<group>"; };
 		D172877829E94C24006DA326 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		D1DCE2412A1EC095001896C2 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,6 +183,9 @@
 				D113C31A2A1CD2D000506DFB /* NoteView.swift */,
 				D113C31C2A1CD4B800506DFB /* HeartView.swift */,
 				D113C31E2A1CD56800506DFB /* AboutView.swift */,
+				D113C3202A1DE50E00506DFB /* EntryViewController.swift */,
+				D113C3222A1DE54C00506DFB /* NoteViewController.swift */,
+				D1DCE2412A1EC095001896C2 /* WebViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -180,6 +195,9 @@
 			children = (
 				D172877029DEA33F006DA326 /* Bird.swift */,
 				D172877229DEA991006DA326 /* BirdService.swift */,
+				D113C3242A1E249200506DFB /* gifToImage.swift */,
+				D113C3262A1E251500506DFB /* whale.gif */,
+				D113C3282A1E3E9100506DFB /* whalebg.jpeg */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -290,7 +308,9 @@
 			files = (
 				D172874B29D6DEF3006DA326 /* LaunchScreen.storyboard in Resources */,
 				D16A33CF29FACFE9008490B7 /* Assets.xcassets in Resources */,
+				D113C3272A1E251500506DFB /* whale.gif in Resources */,
 				D172874329D6DEF2006DA326 /* Main.storyboard in Resources */,
+				D113C3292A1E3E9100506DFB /* whalebg.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -318,13 +338,17 @@
 				D172874629D6DEF2006DA326 /* AngryBird.xcdatamodeld in Sources */,
 				D172874029D6DEF2006DA326 /* BirdListViewController.swift in Sources */,
 				D113C31F2A1CD56800506DFB /* AboutView.swift in Sources */,
+				D113C3232A1DE54C00506DFB /* NoteViewController.swift in Sources */,
 				D172876F29D8D08B006DA326 /* BirdCell.swift in Sources */,
+				D113C3252A1E249200506DFB /* gifToImage.swift in Sources */,
 				D113C31D2A1CD4B800506DFB /* HeartView.swift in Sources */,
+				D113C3212A1DE50E00506DFB /* EntryViewController.swift in Sources */,
 				D172873C29D6DEF2006DA326 /* AppDelegate.swift in Sources */,
 				D172877329DEA991006DA326 /* BirdService.swift in Sources */,
 				D172877129DEA33F006DA326 /* Bird.swift in Sources */,
 				D172873E29D6DEF2006DA326 /* SceneDelegate.swift in Sources */,
 				D172877929E94C24006DA326 /* DetailViewController.swift in Sources */,
+				D1DCE2422A1EC095001896C2 /* WebViewController.swift in Sources */,
 				D113C31B2A1CD2D000506DFB /* NoteView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

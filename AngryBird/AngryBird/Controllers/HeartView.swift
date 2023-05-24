@@ -9,12 +9,26 @@ import UIKit
 
 class HeartView: UIViewController {
 
-    @IBOutlet weak var mtTableView: UITableView!
+    private let button: UIButton = {
+        let button = UIButton()
+        button.setTitle("Watch Video", for: .normal)
+        
+        return button
+    }()
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.view.addSubview(button)
+        button.addTarget(self, action: #selector(didTapButton), for:.touchUpInside)
 
         // Do any additional setup after loading the view.
+    }
+    
+    @objc private func didTapButton() {
+        
     }
     
 
