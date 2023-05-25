@@ -345,7 +345,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SiA-XT-pwi">
-                                <rect key="frame" x="10" y="57" width="355" height="34"/>
+                                <rect key="frame" x="10" y="57" width="355" height="19"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="52" id="JhP-FS-2zI"/>
                                 </constraints>
@@ -353,7 +353,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="tl0-Zd-wAw">
-                                <rect key="frame" x="10" y="101" width="355" height="682"/>
+                                <rect key="frame" x="10" y="86" width="355" height="682"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
@@ -399,7 +399,7 @@
                                 <color key="backgroundColor" systemColor="separatorColor"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="gray" title="Learn More">
+                                <buttonConfiguration key="configuration" style="gray" title="Watch Video">
                                     <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle1"/>
                                 </buttonConfiguration>
                             </button>
@@ -408,7 +408,7 @@
                                 <color key="backgroundColor" systemColor="secondarySystemFillColor"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="gray" title="Watch Video">
+                                <buttonConfiguration key="configuration" style="gray" title="Learn  More">
                                     <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle1"/>
                                 </buttonConfiguration>
                             </button>
@@ -432,6 +432,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Whale Conservation" id="TUc-Pg-Ter"/>
+                    <connections>
+                        <outlet property="button" destination="cbY-HP-Ecn" id="Qar-lk-KVu"/>
+                        <outlet property="videoButton" destination="YvD-qH-yPZ" id="qLh-JX-cyu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3T5-Bj-fyC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -588,7 +592,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6KP-g8-nYV">
-                                <rect key="frame" x="10" y="56.999999999999993" width="355" height="28.666666666666664"/>
+                                <rect key="frame" x="10" y="57" width="355" height="47"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="Yp7-PA-Bjv"/>
                                 </constraints>
@@ -597,7 +601,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="31e-E8-ptz">
-                                <rect key="frame" x="10" y="95.666666666666686" width="355" height="654"/>
+                                <rect key="frame" x="10" y="114" width="355" height="654"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>

@@ -9,12 +9,16 @@ import UIKit
 
 class HeartView: UIViewController {
 
-    private let button: UIButton = {
-        let button = UIButton()
-        button.setTitle("Watch Video", for: .normal)
-        
-        return button
-    }()
+    @IBOutlet weak var button: UIButton!
+    
+    @IBOutlet weak var videoButton: UIButton!
+    
+    //    private let button: UIButton = {
+//        let button = UIButton()
+//        button.setTitle("Watch Video", for: .normal)
+//
+//        return button
+//    }()
     
     
     
@@ -23,12 +27,31 @@ class HeartView: UIViewController {
         
         self.view.addSubview(button)
         button.addTarget(self, action: #selector(didTapButton), for:.touchUpInside)
+        
+        self.view.addSubview(videoButton)
+        videoButton.addTarget(self, action: #selector(didTapVideoButton), for:.touchUpInside)
+        
+        
 
         // Do any additional setup after loading the view.
     }
     
     @objc private func didTapButton() {
-        
+        guard let url = URL(string: "https://whale.org/whale-conservation/") else {
+            return
+        }
+        let vc = WebViewController(url: url, title: "Learn More")
+        let navVC = UINavigationController(rootViewController: vc)
+        present(navVC, animated: true)
+    }
+    
+    @objc private func didTapVideoButton() {
+        guard let url = URL(string: "https://www.youtube.com/whalesorg") else {
+            return
+        }
+        let vc = WebViewController(url: url, title: "Watch Videos")
+        let navVC = UINavigationController(rootViewController: vc)
+        present(navVC, animated: true)
     }
     
 
