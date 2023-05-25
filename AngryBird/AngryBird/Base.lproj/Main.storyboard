@@ -257,6 +257,7 @@
                         <outlet property="descriptionLabel" destination="sNM-gg-1sg" id="FFY-Gl-V0g"/>
                         <outlet property="habitatLabel" destination="ZMu-w1-0ap" id="svT-TZ-EPJ"/>
                         <outlet property="map" destination="912-rB-qbM" id="0Lc-VK-diQ"/>
+                        <outlet property="whaleImageView" destination="k09-tQ-Arr" id="gbY-KS-wkK"/>
                         <outlet property="whaleLabel" destination="6CZ-XX-Ha6" id="Rif-QC-0ut"/>
                     </connections>
                 </viewController>
@@ -466,14 +467,14 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="DML-a9-izs" firstAttribute="top" secondItem="IpE-Vi-NJO" secondAttribute="top" id="9h7-2Z-fwI"/>
-                            <constraint firstItem="IpE-Vi-NJO" firstAttribute="bottom" secondItem="kgD-IJ-ZEA" secondAttribute="bottom" constant="419" id="BLv-9E-F9B"/>
+                            <constraint firstItem="kgD-IJ-ZEA" firstAttribute="top" secondItem="IpE-Vi-NJO" secondAttribute="top" constant="70" id="Iiq-ta-qKh"/>
+                            <constraint firstItem="kgD-IJ-ZEA" firstAttribute="leading" secondItem="IpE-Vi-NJO" secondAttribute="leading" constant="38" id="L19-5e-Ex2"/>
                             <constraint firstItem="DML-a9-izs" firstAttribute="leading" secondItem="IpE-Vi-NJO" secondAttribute="leading" id="QEr-U2-1EG"/>
-                            <constraint firstItem="kgD-IJ-ZEA" firstAttribute="centerX" secondItem="ZJ7-pA-aeF" secondAttribute="centerX" id="dnc-QT-8vy"/>
                             <constraint firstItem="IpE-Vi-NJO" firstAttribute="trailing" secondItem="DML-a9-izs" secondAttribute="trailing" id="fSC-bT-Ma6"/>
+                            <constraint firstItem="kgD-IJ-ZEA" firstAttribute="centerX" secondItem="ZJ7-pA-aeF" secondAttribute="centerX" id="ktz-ls-05a"/>
                             <constraint firstItem="IpE-Vi-NJO" firstAttribute="bottom" secondItem="DML-a9-izs" secondAttribute="bottom" id="mUh-1a-sJ4"/>
-                            <constraint firstItem="kgD-IJ-ZEA" firstAttribute="top" secondItem="IpE-Vi-NJO" secondAttribute="top" constant="70" id="ony-up-6mT"/>
-                            <constraint firstItem="kgD-IJ-ZEA" firstAttribute="top" secondItem="IpE-Vi-NJO" secondAttribute="top" constant="70" id="x5A-be-mYA"/>
-                            <constraint firstItem="kgD-IJ-ZEA" firstAttribute="leading" secondItem="IpE-Vi-NJO" secondAttribute="leading" constant="38" id="ya0-qc-ffA"/>
+                            <constraint firstItem="IpE-Vi-NJO" firstAttribute="bottom" secondItem="kgD-IJ-ZEA" secondAttribute="bottom" constant="419" id="rMI-s1-Xsl"/>
+                            <constraint firstItem="IpE-Vi-NJO" firstAttribute="trailing" secondItem="kgD-IJ-ZEA" secondAttribute="trailing" constant="38" id="ru0-jR-3sK"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="About" id="XZm-4T-hiV"/>
@@ -573,6 +574,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="c2y-fY-FMU">
                         <rect key="frame" x="0.0" y="47" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.15292615002468787" green="0.67094341743705177" blue="0.95960856958762886" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
