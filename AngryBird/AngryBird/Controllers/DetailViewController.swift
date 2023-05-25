@@ -28,7 +28,7 @@ class DetailViewController: UIViewController {
         self.habitatLabel.text = "From Arctic"
         // Set initial location in Honolulu
         let initialLocation = CLLocation(latitude: 21.282778, longitude: -157.829444)
-        map.centerToLocation(initialLocation)
+        //map.centerToLocation(initialLocation)
         
         DispatchQueue.global(qos:
             .userInitiated).async {

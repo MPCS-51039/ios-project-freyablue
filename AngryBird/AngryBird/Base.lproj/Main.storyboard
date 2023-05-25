@@ -3,7 +3,6 @@
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
-        <capability name="Map view configurations" minToolsVersion="14.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -135,8 +134,8 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cNu-W8-2G7">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="a4G-j7-enf">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="551.66666666666663"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="a4G-j7-enf">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="475.66666666666669"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Killerwhales" translatesAutoresizingMaskIntoConstraints="NO" id="k09-tQ-Arr">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="281.33333333333331"/>
@@ -145,7 +144,7 @@
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Orca" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6CZ-XX-Ha6" userLabel="whaleLabel">
-                                                <rect key="frame" x="153.33333333333334" y="302.33333333333331" width="68.333333333333343" height="147.33333333333331"/>
+                                                <rect key="frame" x="153.33333333333334" y="313.33333333333331" width="68.333333333333343" height="38.333333333333314"/>
                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="32"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -154,7 +153,7 @@
                                                 </variation>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="DI9-r6-Hmn">
-                                                <rect key="frame" x="59.333333333333343" y="470.66666666666669" width="256.66666666666663" height="30"/>
+                                                <rect key="frame" x="59.333333333333343" y="383.66666666666669" width="256.66666666666663" height="30"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vs4-7F-FI1">
                                                         <rect key="frame" x="0.0" y="0.0" width="133.66666666666666" height="30"/>
@@ -177,7 +176,7 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="7ng-Iu-bCM">
-                                                <rect key="frame" x="108.66666666666669" y="521.66666666666663" width="158" height="30"/>
+                                                <rect key="frame" x="108.66666666666669" y="445.66666666666669" width="158" height="30"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Habitat:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gPN-TM-6xk">
                                                         <rect key="frame" x="0.0" y="0.0" width="87.333333333333329" height="30"/>
@@ -201,25 +200,11 @@
                                             </stackView>
                                         </subviews>
                                     </stackView>
-                                    <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="912-rB-qbM">
-                                        <rect key="frame" x="67" y="611" width="241" height="128"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="128" id="6ug-lH-kdT"/>
-                                        </constraints>
-                                        <standardMapConfiguration key="preferredConfiguration"/>
-                                    </mapView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="912-rB-qbM" firstAttribute="leading" secondItem="cNu-W8-2G7" secondAttribute="leading" constant="67" id="62f-cY-Rxo"/>
                                     <constraint firstItem="a4G-j7-enf" firstAttribute="trailing" secondItem="405-ZW-IeP" secondAttribute="trailing" id="Ea3-uf-lpN"/>
-                                    <constraint firstItem="912-rB-qbM" firstAttribute="top" secondItem="cNu-W8-2G7" secondAttribute="top" constant="611" id="Kno-5y-eQ2"/>
-                                    <constraint firstItem="912-rB-qbM" firstAttribute="centerX" secondItem="a4G-j7-enf" secondAttribute="centerX" id="Kyr-Xy-K61"/>
-                                    <constraint firstItem="912-rB-qbM" firstAttribute="leading" secondItem="cNu-W8-2G7" secondAttribute="leading" constant="67" id="N3F-J1-XQu"/>
-                                    <constraint firstItem="912-rB-qbM" firstAttribute="top" secondItem="a4G-j7-enf" secondAttribute="bottom" constant="59.333333333333314" id="ali-ay-Ti6"/>
                                     <constraint firstItem="a4G-j7-enf" firstAttribute="leading" secondItem="405-ZW-IeP" secondAttribute="leading" id="bhJ-3r-3o5"/>
-                                    <constraint firstItem="912-rB-qbM" firstAttribute="top" secondItem="cNu-W8-2G7" secondAttribute="top" constant="611" id="cfm-ob-sd4"/>
                                     <constraint firstItem="a4G-j7-enf" firstAttribute="top" secondItem="405-ZW-IeP" secondAttribute="top" id="umU-iI-YWO"/>
-                                    <constraint firstItem="a4G-j7-enf" firstAttribute="width" secondItem="UWi-VG-EnN" secondAttribute="width" id="vBI-El-qI1"/>
                                     <constraint firstItem="a4G-j7-enf" firstAttribute="bottom" secondItem="405-ZW-IeP" secondAttribute="bottom" id="xk8-8V-phu"/>
                                 </constraints>
                                 <viewLayoutGuide key="contentLayoutGuide" id="405-ZW-IeP"/>
@@ -256,7 +241,6 @@
                     <connections>
                         <outlet property="descriptionLabel" destination="sNM-gg-1sg" id="FFY-Gl-V0g"/>
                         <outlet property="habitatLabel" destination="ZMu-w1-0ap" id="svT-TZ-EPJ"/>
-                        <outlet property="map" destination="912-rB-qbM" id="0Lc-VK-diQ"/>
                         <outlet property="whaleImageView" destination="k09-tQ-Arr" id="gbY-KS-wkK"/>
                         <outlet property="whaleLabel" destination="6CZ-XX-Ha6" id="Rif-QC-0ut"/>
                     </connections>
@@ -346,7 +330,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SiA-XT-pwi">
-                                <rect key="frame" x="10" y="57" width="355" height="19"/>
+                                <rect key="frame" x="10" y="57" width="355" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="52" id="JhP-FS-2zI"/>
                                 </constraints>
@@ -354,7 +338,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="tl0-Zd-wAw">
-                                <rect key="frame" x="10" y="86" width="355" height="682"/>
+                                <rect key="frame" x="10" y="101" width="355" height="682"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
@@ -395,8 +379,8 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="whalebg.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="ttW-nq-cr9">
                                 <rect key="frame" x="0.0" y="91" width="375" height="638"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YvD-qH-yPZ">
-                                <rect key="frame" x="88" y="161" width="199" height="99"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YvD-qH-yPZ">
+                                <rect key="frame" x="88" y="108" width="636" height="47.666666666666657"/>
                                 <color key="backgroundColor" systemColor="separatorColor"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
@@ -404,8 +388,8 @@
                                     <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle1"/>
                                 </buttonConfiguration>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cbY-HP-Ecn">
-                                <rect key="frame" x="83" y="312" width="209" height="78"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cbY-HP-Ecn">
+                                <rect key="frame" x="83" y="185" width="646" height="47.666666666666657"/>
                                 <color key="backgroundColor" systemColor="secondarySystemFillColor"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
@@ -413,24 +397,49 @@
                                     <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle1"/>
                                 </buttonConfiguration>
                             </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="LaG-Sb-y6E">
+                                <rect key="frame" x="16" y="433" width="359" height="219"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" red="0.19452722293814428" green="0.077887018926796142" blue="0.063444844694215907" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <string key="text">Whaling and other threats have led to at least five of the 13 great whales being listed as endangered.A past ban which was implemented around the 1960s has helped some of these species of whale to recover. "Several populations of southern right whales, humpbacks in many areas, grey whales in the eastern North Pacific, and blue whales in both the eastern North Pacific and central North Atlantic have begun to show signs of recovery."</string>
+                                <color key="textColor" red="0.78102851159793818" green="0.78102851159793818" blue="0.78102851159793818" alpha="0.86769238945578231" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="fkX-uu-GbB"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="fkX-uu-GbB" firstAttribute="trailing" secondItem="cbY-HP-Ecn" secondAttribute="trailing" constant="83" id="1Dg-Ks-3hT"/>
+                            <constraint firstItem="fkX-uu-GbB" firstAttribute="bottom" secondItem="LaG-Sb-y6E" secondAttribute="bottom" constant="32" id="5w3-pH-MaX"/>
                             <constraint firstItem="fkX-uu-GbB" firstAttribute="trailing" secondItem="ttW-nq-cr9" secondAttribute="trailing" id="6E6-QS-wOc"/>
+                            <constraint firstItem="fkX-uu-GbB" firstAttribute="trailing" secondItem="LaG-Sb-y6E" secondAttribute="trailing" constant="16" id="6XB-ys-b8a"/>
                             <constraint firstItem="fkX-uu-GbB" firstAttribute="bottom" secondItem="ttW-nq-cr9" secondAttribute="bottom" id="8Sl-Kp-rrJ"/>
+                            <constraint firstItem="LaG-Sb-y6E" firstAttribute="top" secondItem="fkX-uu-GbB" secondAttribute="top" constant="494" id="Be6-KP-FOr"/>
                             <constraint firstItem="fkX-uu-GbB" firstAttribute="trailing" secondItem="YvD-qH-yPZ" secondAttribute="trailing" constant="88" id="EXY-Fi-if7"/>
                             <constraint firstItem="YvD-qH-yPZ" firstAttribute="top" secondItem="fkX-uu-GbB" secondAttribute="top" constant="70" id="LqR-7d-h8p"/>
                             <constraint firstItem="ttW-nq-cr9" firstAttribute="top" secondItem="fkX-uu-GbB" secondAttribute="top" id="QY7-vz-oJm"/>
                             <constraint firstItem="ttW-nq-cr9" firstAttribute="leading" secondItem="fkX-uu-GbB" secondAttribute="leading" id="RoT-qV-o89"/>
                             <constraint firstItem="ttW-nq-cr9" firstAttribute="centerX" secondItem="TL1-3N-YgD" secondAttribute="centerX" id="a5u-75-Gp1"/>
                             <constraint firstItem="YvD-qH-yPZ" firstAttribute="leading" secondItem="fkX-uu-GbB" secondAttribute="leading" constant="88" id="hMd-QX-kkm"/>
-                            <constraint firstItem="fkX-uu-GbB" firstAttribute="bottom" secondItem="cbY-HP-Ecn" secondAttribute="bottom" constant="339" id="hq7-6Z-FUi"/>
-                            <constraint firstItem="fkX-uu-GbB" firstAttribute="bottom" secondItem="YvD-qH-yPZ" secondAttribute="bottom" constant="469" id="koa-g8-5Bg"/>
                             <constraint firstItem="cbY-HP-Ecn" firstAttribute="leading" secondItem="fkX-uu-GbB" secondAttribute="leading" constant="83" id="l8Q-tQ-OHS"/>
+                            <constraint firstItem="LaG-Sb-y6E" firstAttribute="leading" secondItem="fkX-uu-GbB" secondAttribute="leading" constant="16" id="oYk-F5-ubM"/>
                             <constraint firstItem="cbY-HP-Ecn" firstAttribute="top" secondItem="YvD-qH-yPZ" secondAttribute="bottom" constant="52" id="u3j-Uv-g1R"/>
                         </constraints>
+                        <variation key="heightClass=compact">
+                            <mask key="constraints">
+                                <include reference="LqR-7d-h8p"/>
+                                <include reference="hMd-QX-kkm"/>
+                                <include reference="l8Q-tQ-OHS"/>
+                                <include reference="u3j-Uv-g1R"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="6XB-ys-b8a"/>
+                                <include reference="oYk-F5-ubM"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Whale Conservation" id="TUc-Pg-Ter"/>
                     <connections>
@@ -440,7 +449,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3T5-Bj-fyC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="320.80000000000001" y="467.73399014778329"/>
+            <point key="canvasLocation" x="317.60000000000002" y="464.77832512315274"/>
         </scene>
         <!--About-->
         <scene sceneID="lQi-OE-Cl2">
@@ -453,29 +462,37 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="whale.gif" translatesAutoresizingMaskIntoConstraints="NO" id="DML-a9-izs" userLabel="bg">
                                 <rect key="frame" x="0.0" y="91" width="375" height="638"/>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.90000000000000002" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="kgD-IJ-ZEA">
-                                <rect key="frame" x="38" y="161" width="299" height="149"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.90000000000000002" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="kgD-IJ-ZEA">
+                                <rect key="frame" x="38" y="108" width="299" height="557"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <string key="text">The Whalepedia app aims to share more knowledge about whales and Whale Conservation...
 </string>
                                 <color key="textColor" red="0.097037476509369197" green="0.18023919068541716" blue="0.52110180412371132" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <variation key="heightClass=regular-widthClass=compact" preservesSuperviewLayoutMargins="YES"/>
                             </textView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="IpE-Vi-NJO"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="IpE-Vi-NJO" firstAttribute="bottom" secondItem="kgD-IJ-ZEA" secondAttribute="bottom" constant="64" id="0GJ-8f-d9B"/>
                             <constraint firstItem="DML-a9-izs" firstAttribute="top" secondItem="IpE-Vi-NJO" secondAttribute="top" id="9h7-2Z-fwI"/>
-                            <constraint firstItem="kgD-IJ-ZEA" firstAttribute="top" secondItem="IpE-Vi-NJO" secondAttribute="top" constant="70" id="Iiq-ta-qKh"/>
                             <constraint firstItem="kgD-IJ-ZEA" firstAttribute="leading" secondItem="IpE-Vi-NJO" secondAttribute="leading" constant="38" id="L19-5e-Ex2"/>
                             <constraint firstItem="DML-a9-izs" firstAttribute="leading" secondItem="IpE-Vi-NJO" secondAttribute="leading" id="QEr-U2-1EG"/>
                             <constraint firstItem="IpE-Vi-NJO" firstAttribute="trailing" secondItem="DML-a9-izs" secondAttribute="trailing" id="fSC-bT-Ma6"/>
                             <constraint firstItem="kgD-IJ-ZEA" firstAttribute="centerX" secondItem="ZJ7-pA-aeF" secondAttribute="centerX" id="ktz-ls-05a"/>
                             <constraint firstItem="IpE-Vi-NJO" firstAttribute="bottom" secondItem="DML-a9-izs" secondAttribute="bottom" id="mUh-1a-sJ4"/>
-                            <constraint firstItem="IpE-Vi-NJO" firstAttribute="bottom" secondItem="kgD-IJ-ZEA" secondAttribute="bottom" constant="419" id="rMI-s1-Xsl"/>
                             <constraint firstItem="IpE-Vi-NJO" firstAttribute="trailing" secondItem="kgD-IJ-ZEA" secondAttribute="trailing" constant="38" id="ru0-jR-3sK"/>
+                            <constraint firstItem="kgD-IJ-ZEA" firstAttribute="top" secondItem="IpE-Vi-NJO" secondAttribute="top" constant="17" id="vTP-U0-n2R"/>
                         </constraints>
+                        <variation key="heightClass=compact">
+                            <mask key="constraints">
+                                <include reference="ru0-jR-3sK"/>
+                                <include reference="L19-5e-Ex2"/>
+                                <include reference="ktz-ls-05a"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" title="About" id="XZm-4T-hiV"/>
                     <connections>
@@ -485,7 +502,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="whf-1K-WaE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="269.60000000000002" y="-319.21182266009856"/>
+            <point key="canvasLocation" x="268.9655172413793" y="-320.80000000000001"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="LoL-zn-pGQ">
@@ -594,7 +611,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6KP-g8-nYV">
-                                <rect key="frame" x="10" y="57" width="355" height="47"/>
+                                <rect key="frame" x="10" y="56.999999999999993" width="355" height="28.666666666666664"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="Yp7-PA-Bjv"/>
                                 </constraints>
@@ -603,7 +620,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="31e-E8-ptz">
-                                <rect key="frame" x="10" y="114" width="355" height="654"/>
+                                <rect key="frame" x="10" y="95.666666666666686" width="355" height="654"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
