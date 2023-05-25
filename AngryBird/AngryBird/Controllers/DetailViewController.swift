@@ -13,22 +13,29 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var whaleImageView: UIImageView!
     @IBOutlet weak var whaleLabel: UILabel!
     
-    @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var descriptionText: UITextField!
     
     @IBOutlet weak var map: MKMapView!
     
     @IBOutlet weak var habitatLabel: UILabel!
     var bird: Bird!
+    
+   
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         self.whaleLabel.text = bird.name
-        self.descriptionLabel.text = bird.description
-        self.habitatLabel.text = "From Arctic"
+        
+        self.habitatLabel.text = "From Arctic, found in all oceans"
         // Set initial location in Honolulu
-        let initialLocation = CLLocation(latitude: 21.282778, longitude: -157.829444)
+        //let initialLocation = CLLocation(latitude: 21.282778, longitude: -157.829444)
         //map.centerToLocation(initialLocation)
+        NSLayoutConstraint.activate([
+                    descriptionText.widthAnchor.constraint(equalToConstant: 350),
+                    descriptionText.heightAnchor.constraint(equalToConstant: 100)
+                ])
+        self.descriptionText.text = bird.description
         
         DispatchQueue.global(qos:
             .userInitiated).async {

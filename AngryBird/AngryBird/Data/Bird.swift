@@ -15,6 +15,7 @@ class Bird:CustomDebugStringConvertible, Codable {
     var name : String
     var description : String
     var imageURL: String
+    //var habitat: String
     var confirmedSighting: Bool = false
     
     private enum CodingKeys: String, CodingKey {
@@ -25,6 +26,7 @@ class Bird:CustomDebugStringConvertible, Codable {
         self.name = name
         self.description = description
         self.imageURL = imageURL
+        //self.habitat = habitat
     }
     
 }

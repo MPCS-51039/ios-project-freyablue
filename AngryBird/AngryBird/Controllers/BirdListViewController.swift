@@ -7,35 +7,7 @@
 
 import UIKit
 
-//class TabBarController:UITabBarController{
-//
-//    @IBInspectable var initialIndex:Int = 1
-//
-//    override func viewDidLoad() {
-//        super.viewDidLoad()
-//        selectedIndex = initialIndex
-//        view.backgroundColor = .lightGray
-//        let vc1 = BirdListViewController()
-//        let vc2 = SecondViewController()
-//        let vc3 = ThirdViewController()
-//        let vc4 = FourthViewController()
-//        vc1.title = "Cell"
-//        vc2.title = "Home"
-//        vc3.title = "Favourite"
-//        vc4.title = "About"
-//        self.setViewControllers([vc1, vc2,vc3,vc4], animated: false)
-//        guard let items = self.tabBar.items else { return }
-//        let icon_images = ["heart","house","star","bell"]
-//        for x in 0...3 {
-//            items[x].image = UIImage(systemName: icon_images[x])
-//        }
-//        self.tabBar.tintColor = .black
-//
-//        present(self,animated: true)
-//    }
-//
-//
-//}
+
 class BirdListViewController: UIViewController{
     
     

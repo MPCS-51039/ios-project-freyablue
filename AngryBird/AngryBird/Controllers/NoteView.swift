@@ -22,10 +22,15 @@ class NoteView: UIViewController, UITableViewDelegate, UITableViewDataSource {
         table.delegate = self
         table.dataSource = self
         title = "Whale Notes"
-        self.view.backgroundColor = UIColor(red: 255/255, green: 231/255, blue: 199/255, alpha: 1)
+//        self.view.backgroundColor = UIColor(red: 255/255, green: 231/255, blue: 199/255, alpha: 1)
         
 
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        setGradientBackground()
+        super.viewWillAppear(animated)
     }
     
     @IBAction func didTapNewNote(){
@@ -72,6 +77,17 @@ class NoteView: UIViewController, UITableViewDelegate, UITableViewDataSource {
         navigationController?.pushViewController(vc,animated:true)
     }
     
+    func setGradientBackground() {
+        let colorTop =  UIColor(red: 135.0/255.0, green: 206.0/255.0, blue: 235.0/255.0, alpha: 1.0).cgColor
+        let colorBottom = UIColor(red: 255.0/255.0, green: 94.0/255.0, blue: 58.0/255.0, alpha: 1.0).cgColor
+                    
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.colors = [colorTop, colorBottom]
+        gradientLayer.locations = [0.0, 1.0]
+        gradientLayer.frame = self.view.bounds
+                
+        self.view.layer.insertSublayer(gradientLayer, at:0)
+    }
    
     
 

@@ -19,8 +19,8 @@ class NoteViewController: UIViewController {
         super.viewDidLoad()
         titleLabel.text = noteTitle
         noteLabel.text = note
-        self.view.backgroundColor = UIColor(red: 254/255, green: 248/255, blue: 221/255, alpha: 1)
-        noteLabel.backgroundColor = UIColor(red: 254/255, green: 248/255, blue: 221/255, alpha: 1)
+        self.view.backgroundColor = UIColor(red: 176/255, green: 224/255, blue: 230/255, alpha: 1)
+        noteLabel.backgroundColor = UIColor(red: 176/255, green: 224/255, blue: 230/255, alpha: 1)
 
         // Do any additional setup after loading the view.
     }

@@ -21,6 +21,7 @@ class HeartView: UIViewController {
 //    }()
     
     
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +31,10 @@ class HeartView: UIViewController {
         
         self.view.addSubview(videoButton)
         videoButton.addTarget(self, action: #selector(didTapVideoButton), for:.touchUpInside)
+        self.view.backgroundColor = UIColor(red: 240.0/255.0, green: 248.0/255.0, blue: 255.0/255.0, alpha: 1.0)
+        
+        
+
         
         
 

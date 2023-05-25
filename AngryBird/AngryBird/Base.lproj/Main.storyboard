@@ -134,8 +134,8 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cNu-W8-2G7">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="a4G-j7-enf">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="475.66666666666669"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="a4G-j7-enf">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="519"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Killerwhales" translatesAutoresizingMaskIntoConstraints="NO" id="k09-tQ-Arr">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="281.33333333333331"/>
@@ -144,7 +144,7 @@
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Orca" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6CZ-XX-Ha6" userLabel="whaleLabel">
-                                                <rect key="frame" x="153.33333333333334" y="313.33333333333331" width="68.333333333333343" height="38.333333333333314"/>
+                                                <rect key="frame" x="153.33333333333334" y="292.33333333333331" width="68.333333333333343" height="38.333333333333314"/>
                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="32"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -152,11 +152,11 @@
                                                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="70"/>
                                                 </variation>
                                             </label>
-                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="DI9-r6-Hmn">
-                                                <rect key="frame" x="59.333333333333343" y="383.66666666666669" width="256.66666666666663" height="30"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="DI9-r6-Hmn">
+                                                <rect key="frame" x="120.66666666666667" y="341.66666666666669" width="133.66666666666663" height="93.333333333333314"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vs4-7F-FI1">
-                                                        <rect key="frame" x="0.0" y="0.0" width="133.66666666666666" height="30"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="133.66666666666666" height="45.666666666666664"/>
                                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="25"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -164,19 +164,15 @@
                                                             <fontDescription key="fontDescription" type="system" weight="medium" pointSize="48"/>
                                                         </variation>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="killerwhale" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sNM-gg-1sg">
-                                                        <rect key="frame" x="146.66666666666666" y="0.0" width="109.99999999999997" height="30"/>
-                                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="25"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                        <variation key="heightClass=regular-widthClass=regular">
-                                                            <fontDescription key="fontDescription" type="system" weight="light" pointSize="48"/>
-                                                        </variation>
-                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="killer" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PaN-XF-Kfe">
+                                                        <rect key="frame" x="0.0" y="47.666666666666629" width="88" height="45.666666666666657"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
                                                 </subviews>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="7ng-Iu-bCM">
-                                                <rect key="frame" x="108.66666666666669" y="445.66666666666669" width="158" height="30"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="7ng-Iu-bCM">
+                                                <rect key="frame" x="144" y="446" width="87.333333333333314" height="73"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Habitat:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gPN-TM-6xk">
                                                         <rect key="frame" x="0.0" y="0.0" width="87.333333333333329" height="30"/>
@@ -188,7 +184,7 @@
                                                         </variation>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZMu-w1-0ap">
-                                                        <rect key="frame" x="100.33333333333333" y="0.0" width="57.666666666666671" height="30"/>
+                                                        <rect key="frame" x="0.0" y="43" width="57.666666666666664" height="30"/>
                                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="25"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -239,7 +235,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="p6o-LE-aqY"/>
                     <connections>
-                        <outlet property="descriptionLabel" destination="sNM-gg-1sg" id="FFY-Gl-V0g"/>
+                        <outlet property="descriptionText" destination="PaN-XF-Kfe" id="WcK-sf-m8b"/>
                         <outlet property="habitatLabel" destination="ZMu-w1-0ap" id="svT-TZ-EPJ"/>
                         <outlet property="whaleImageView" destination="k09-tQ-Arr" id="gbY-KS-wkK"/>
                         <outlet property="whaleLabel" destination="6CZ-XX-Ha6" id="Rif-QC-0ut"/>
@@ -534,6 +530,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="UaI-ss-Nkf">
                         <rect key="frame" x="0.0" y="47" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.31176190433050349" green="0.869885631443299" blue="0.72482915330119269" alpha="0.098772321428571425" colorSpace="custom" customColorSpace="displayP3"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -591,7 +588,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="c2y-fY-FMU">
                         <rect key="frame" x="0.0" y="47" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" red="0.15292615002468787" green="0.67094341743705177" blue="0.95960856958762886" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" red="0.15292615002468787" green="0.67094341743705177" blue="0.95960856958762886" alpha="0.39859693877551022" colorSpace="custom" customColorSpace="displayP3"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
